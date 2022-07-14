@@ -41,7 +41,6 @@ body {
   height: 2rem;
   position: absolute;
   bottom: 20px;
-  left: 50%;
   border-left: solid 0.3rem;
   border-bottom: solid 0.3rem;
   transform: rotate(-45deg);
@@ -215,7 +214,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
 .portfolio__wrapper {
   display: flex;
@@ -229,7 +227,7 @@ body {
 }
 .portfolio__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   -moz-column-gap: 15px;
        column-gap: 15px;
   row-gap: 15px;
@@ -237,8 +235,31 @@ body {
   padding: 0;
   justify-content: center;
 }
+.portfolio__grid-item {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.21, 1.01);
+  transform: translateY(50px);
+  opacity: 0;
+}
+.portfolio__grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.15);
+}
 .portfolio__arrow {
   border-color: rgb(30, 30, 30);
+}
+.portfolio__button {
+  padding: 10px 20px;
+  margin: 30px;
+  background-color: #1F1F1F;
+  color: white;
+  font-size: 18px;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.portfolio__button:hover {
+  background-color: rgb(53, 53, 53);
 }
 
 .project__container {
@@ -268,6 +289,7 @@ body {
 .project__link {
   width: 30px;
   height: 30px;
+  text-decoration: none;
 }
 .project__description {
   font-size: 16px;
@@ -284,4 +306,69 @@ body {
   padding-left: 0;
   color: #000000;
   font-size: 10px;
+}
+
+.contact {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1F1F1F;
+}
+.contact__wrapper {
+  max-width: 1000px;
+  display: flex;
+  width: 100%;
+}
+.contact__info {
+  width: 50%;
+  padding: 0px 30px 30px 30px;
+}
+.contact__info p {
+  margin: 0;
+}
+.contact__inputs {
+  width: 50%;
+  background-color: #3a3a3a;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact__inputs h3 {
+  margin: 5px 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+.contact__inputs input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 2px #ffffff;
+  color: #FFFFFF;
+  margin-bottom: 15px;
+  padding: 5px;
+}
+.contact__inputs #input__text {
+  height: 300px;
+}
+.contact__button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #1F1F1F;
+  font-size: 18px;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.contact__button:hover {
+  background-color: #1F1F1F;
+  color: #ffffff;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }/*# sourceMappingURL=style.css.map */
