@@ -5,7 +5,7 @@ My portfolio website will be soon available at address `http://www.wasiuralukasz
 ## Stack
 
 * HTML 
-* Sass
+* SCSS
 * Javascript
 
 ## 🛠️ In progress 🛠️
