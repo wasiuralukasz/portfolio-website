@@ -40,7 +40,9 @@ window.addEventListener("scroll", () => {
 
 //hamburger button
 let hamburger = document.querySelector(".hamburger");
+let navbarList = document.querySelector(".navbar__list");
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('hamburger--active');
+  navbarList.classList.toggle('navbar__list-open')
 })

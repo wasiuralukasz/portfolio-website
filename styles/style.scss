@@ -98,7 +98,26 @@ body {
         display: flex;
         align-items: center;
         padding: 0;
-        // justify-content: space-around;
+        margin: 0;
+
+        @include bp.breakpoint(l) {
+            flex-direction: column;
+            justify-content: space-evenly;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 100vh;
+            padding: 100px 0;
+            transform: translateX(100vw);
+            background-color: rgb(14, 12, 12);
+            transition: .3s ease-in-out;
+        }
+    }
+
+    &__list-open {
+        transform: translateX(0);
+        transition: .3s ease-in-out;
     }
 
     &__item {
@@ -106,17 +125,6 @@ body {
 
         &:last-child {
             padding: 0;
-            display: none;
-
-            @include bp.breakpoint(xl) {
-                display: inline-block;
-            }
-        }
-
-        &:not(:last-child) {
-            @include bp.breakpoint(xl) {
-                display: none;
-            }
         }
     }
 
@@ -160,6 +168,12 @@ body {
     background-color: transparent;
     border: 0;
     margin: 0;
+    display: none;
+    z-index: 1;
+
+    @include bp.breakpoint(l) {
+        display: block;
+    }
 
     &__box {
         width: 40px;
@@ -324,17 +338,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @include bp.breakpoint(xl) {
-        display: none;
-    }
+    height: auto;
 
     &__wrapper {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         max-width: 1000px;
         width: 80%;
+
+        @include bp.breakpoint(xl) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        & h1 {
+            color: #000000;
+            font-size: 48px;
+        }
+
+        & div {
+            display: flex;
+            margin: 40px;
+
+            @include bp.breakpoint(xl) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     }
 
     &__image {
@@ -344,6 +376,11 @@ body {
         background-image: url('/images/about_image.JPG');
         background-size: cover;
         border-radius: 5px;
+        display: block;
+
+        @include bp.breakpoint(xl) {
+            margin: 20px;
+        }
 
         &::before {
             content: "";
@@ -356,6 +393,11 @@ body {
             position: absolute;
             left: -60px;
             bottom: -60px;
+
+            @include bp.breakpoint(xl) {
+                display: none;
+            }
+            
         }
 
         &::after {
@@ -369,19 +411,28 @@ body {
             position: absolute;
             right: -70px;
             top: -50px;
+
+            @include bp.breakpoint(xl) {
+                display: none;
+            }
         }
     }
 
     &__text {
         padding-left: 100px;
         width: 40%;
+
+        @include bp.breakpoint(xl) {
+            padding: 20px;
+            width: 100%;
+        }
     }
 
-    & h1 {
-        color: rgb(30, 30, 30);
-        font-size: 3em;
-        margin: 0;
-    }
+    // & h1 {
+    //     color: rgb(30, 30, 30);
+    //     font-size: 3em;
+    //     margin: 0;
+    // }
 
     &__paragraph {
         color: rgb(30, 30, 30);
