@@ -351,6 +351,7 @@ body {
         @include bp.breakpoint(xl) {
             flex-direction: column;
             align-items: center;
+            width: 100%;
         }
 
         & h1 {
@@ -363,6 +364,11 @@ body {
             margin: 40px;
 
             @include bp.breakpoint(xl) {
+                justify-content: center;
+                margin: 0;
+            }
+
+            @include bp.breakpoint(l) {
                 flex-direction: column;
                 align-items: center;
             }
@@ -378,9 +384,19 @@ body {
         border-radius: 5px;
         display: block;
 
-        @include bp.breakpoint(xl) {
-            margin: 20px;
+        @include bp.breakpoint(l) {
+            width: 60%;
+            height: auto;
         }
+
+        @include bp.breakpoint(s) {
+            width: 90%;
+            height: auto;
+        }
+
+        // @include bp.breakpoint(xl) {
+        //     margin: 20px;
+        // }
 
         &::before {
             content: "";
@@ -423,8 +439,18 @@ body {
         width: 40%;
 
         @include bp.breakpoint(xl) {
-            padding: 20px;
+            padding-left: 40px;
+        }
+
+        @include bp.breakpoint(l) {
+            // padding: 30px;
+            width: 90%;
+            padding-left: 0px;
+        }
+
+        @include bp.breakpoint(s) {
             width: 100%;
+            font-size: 18px;
         }
     }
 
@@ -440,6 +466,22 @@ body {
         height: 100%;
         font-size: 22px;
         font-weight: 500;
+
+        @include bp.breakpoint(xl) {
+            margin: 0;
+        }
+
+        @include bp.breakpoint(l) {
+            margin: 50px;
+        }
+
+        @include bp.breakpoint(l) {
+            margin: 50px;
+        }
+
+        @include bp.breakpoint(m) {
+            font-size: 18px;
+        }
     }
 
     &__arrow {
