@@ -355,7 +355,7 @@ body {
 }
 @media (max-width: 500px) {
   .about__image {
-    width: 90%;
+    width: 100%;
     height: auto;
   }
 }
@@ -450,10 +450,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
 }
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   .portfolio {
-    display: none;
+    flex-direction: column;
   }
 }
 .portfolio__wrapper {
@@ -560,16 +561,25 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #1F1F1F;
-}
-@media (max-width: 1200px) {
-  .contact {
-    display: none;
-  }
+  height: auto;
 }
 .contact__wrapper {
   max-width: 1000px;
   display: flex;
   width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .contact__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contact__wrapper h1 {
+  color: #FFFFFF;
+  font-size: 48px;
 }
 .contact__info {
   width: 50%;
@@ -577,6 +587,12 @@ body {
 }
 .contact__info p {
   margin: 0;
+}
+@media (max-width: 1200px) {
+  .contact__info {
+    width: 100%;
+    padding: 0;
+  }
 }
 .contact__inputs {
   width: 50%;
@@ -586,6 +602,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (max-width: 1200px) {
+  .contact__inputs {
+    width: 100%;
+  }
 }
 .contact__inputs h3 {
   margin: 5px 0;
@@ -604,19 +625,18 @@ body {
 .contact__inputs #input__text {
   height: 300px;
 }
-.contact__button {
-  padding: 10px 20px;
-  background-color: #ffffff;
-  color: #1F1F1F;
-  font-size: 18px;
-  border: 0px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.contact__button:hover {
-  background-color: #1F1F1F;
-  color: #ffffff;
+@media (max-width: 700px) {
+  .contact__button {
+    width: 80%;
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    color: #1F1F1F;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
 }
 
 .show {

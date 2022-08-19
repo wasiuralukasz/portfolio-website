@@ -29,7 +29,7 @@ projectItems.forEach((item) => {
 });
 
 window.addEventListener("scroll", () => {
-  let trigger = (window.innerHeight / 6) * 4;
+  let trigger = (window.innerHeight / 5) * 4;
 
   projectItems.forEach((item) => {
     let topDistance = item.getBoundingClientRect().top;
@@ -41,8 +41,19 @@ window.addEventListener("scroll", () => {
 //hamburger button
 let hamburger = document.querySelector(".hamburger");
 let navbarList = document.querySelector(".navbar__list");
+let navbarLinks = document.querySelectorAll(".navbar__link")
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('hamburger--active');
   navbarList.classList.toggle('navbar__list-open')
+});
+
+navbarLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+    hamburger.classList.remove('hamburger--active');
+    navbarList.classList.remove('navbar__list-open')
+  });
 })
+
+
+

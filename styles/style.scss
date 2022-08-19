@@ -390,7 +390,7 @@ body {
         }
 
         @include bp.breakpoint(s) {
-            width: 90%;
+            width: 100%;
             height: auto;
         }
 
@@ -494,9 +494,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: auto;
 
     @include bp.breakpoint(xl) {
-        display: none;
+        
+    }
+
+    @include bp.breakpoint(l) {
+        flex-direction: column;
     }
 
     &__wrapper {
@@ -622,15 +627,26 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #1F1F1F;
-    
-    @include bp.breakpoint(xl) {
-        display: none;
-    }
+    height: auto;
 
     &__wrapper {
         max-width: 1000px;
         display: flex;
         width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        @include bp.breakpoint(xl) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        & h1 {
+            color: #FFFFFF;
+            font-size: 48px;
+        }
     }
 
     &__info {
@@ -639,6 +655,11 @@ body {
 
         & p {
             margin: 0;
+        }
+
+        @include bp.breakpoint(xl) {
+            width: 100%;
+            padding: 0;
         }
     }
 
@@ -650,6 +671,10 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include bp.breakpoint(xl) {
+            width: 100%;
+        }
 
         & h3 {
             margin: 5px 0;
@@ -673,18 +698,30 @@ body {
     }
 
     &__button {
-        padding: 10px 20px;
-        background-color: #ffffff;
-        color: #1F1F1F;
-        font-size: 18px;
-        border: 0px;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 0.3s;
+        // padding: 10px 20px;
+        // background-color: #ffffff;
+        // color: #1F1F1F;
+        // font-size: 18px;
+        // border: 0px;
+        // border-radius: 10px;
+        // cursor: pointer;
+        // transition: 0.3s;
 
-        &:hover {
-            background-color: #1F1F1F;
-            color: #ffffff;
+        // &:hover {
+        //     background-color: #1F1F1F;
+        //     color: #ffffff;
+        // }
+
+        @include bp.breakpoint(m) {
+            width: 80%;
+            padding: 10px 20px;
+            background-color: #FFFFFF;
+            color: #1F1F1F;
+            border: 0;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 30px;
         }
     }
 }
