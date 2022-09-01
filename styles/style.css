@@ -581,17 +581,25 @@ body {
   color: #FFFFFF;
   font-size: 48px;
 }
-.contact__info {
+.contact__wrapper-flex {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 900px) {
+  .contact__wrapper-flex {
+    display: none;
+  }
+}
+.contact__text {
   width: 50%;
   padding: 0px 30px 30px 30px;
 }
-.contact__info p {
+.contact__text p {
   margin: 0;
 }
-@media (max-width: 1200px) {
-  .contact__info {
-    width: 100%;
-    padding: 0;
+@media (max-width: 900px) {
+  .contact__text {
+    display: none;
   }
 }
 .contact__inputs {
@@ -603,9 +611,9 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   .contact__inputs {
-    width: 100%;
+    display: none;
   }
 }
 .contact__inputs h3 {
@@ -613,7 +621,7 @@ body {
   font-weight: 500;
   font-size: 16px;
 }
-.contact__inputs input {
+.contact__inputs input, .contact__inputs #input__text {
   width: 100%;
   background-color: transparent;
   border: 0;
@@ -621,12 +629,14 @@ body {
   color: #FFFFFF;
   margin-bottom: 15px;
   padding: 5px;
+  font-size: 14px;
 }
-.contact__inputs #input__text {
-  height: 300px;
+.contact__link {
+  display: none;
 }
-@media (max-width: 700px) {
-  .contact__button {
+@media (max-width: 900px) {
+  .contact__link {
+    display: flex;
     width: 80%;
     padding: 10px 20px;
     background-color: #FFFFFF;
@@ -636,7 +646,23 @@ body {
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 30px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
   }
+}
+.contact__link svg {
+  margin-right: 10px;
+}
+.contact__button {
+  border: none;
+  border-radius: 5px;
+  color: #000000;
+  background-color: #FFFFFF;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .show {

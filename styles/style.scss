@@ -649,7 +649,16 @@ body {
         }
     }
 
-    &__info {
+    &__wrapper-flex {
+        display: flex;
+        flex-direction: row;
+
+        @include bp.breakpoint(l) {
+            display: none;
+        }
+    }
+
+    &__text {
         width: 50%;
         padding: 0px 30px 30px 30px;
 
@@ -657,9 +666,8 @@ body {
             margin: 0;
         }
 
-        @include bp.breakpoint(xl) {
-            width: 100%;
-            padding: 0;
+        @include bp.breakpoint(l) {
+            display: none;
         }
     }
 
@@ -672,8 +680,8 @@ body {
         flex-direction: column;
         justify-content: center;
 
-        @include bp.breakpoint(xl) {
-            width: 100%;
+        @include bp.breakpoint(l) {
+            display: none;
         }
 
         & h3 {
@@ -682,7 +690,7 @@ body {
             font-size: 16px;
         }
 
-        & input {
+        & input, #input__text {
             width: 100%;
             background-color: transparent;
             border: 0;
@@ -690,29 +698,16 @@ body {
             color: #FFFFFF;
             margin-bottom: 15px;
             padding: 5px;
+            font-size: 14px;
         }
 
-        #input__text {
-            height: 300px;
-        }
     }
 
-    &__button {
-        // padding: 10px 20px;
-        // background-color: #ffffff;
-        // color: #1F1F1F;
-        // font-size: 18px;
-        // border: 0px;
-        // border-radius: 10px;
-        // cursor: pointer;
-        // transition: 0.3s;
+    &__link {
+        display: none;
 
-        // &:hover {
-        //     background-color: #1F1F1F;
-        //     color: #ffffff;
-        // }
-
-        @include bp.breakpoint(m) {
+        @include bp.breakpoint(l) {
+            display: flex;
             width: 80%;
             padding: 10px 20px;
             background-color: #FFFFFF;
@@ -722,7 +717,25 @@ body {
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 30px;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            height: 50px;  
         }
+
+        & svg {
+            margin-right: 10px;
+        }
+    }
+
+    &__button {
+        border: none;
+        border-radius: 5px;
+        color: #000000;
+        background-color: #FFFFFF;
+        padding: 5px;
+        font-size: 16px;
+        font-weight: 600;
     }
 }
 
