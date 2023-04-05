@@ -489,6 +489,13 @@ body {
     }
 }
 
+.hidden {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
+}
+
 .portfolio {
     position: relative;
     display: flex;
@@ -529,9 +536,7 @@ body {
     }
 
     &__grid-item {
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.21, 1.01);
-        transform: translateY(50px);
-        opacity: 0;
+        transition: .25s ease;
     }
 
     &__grid-item:hover {
@@ -558,6 +563,47 @@ body {
         &:hover {
             background-color: rgb(53, 53, 53);
             // box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    &__input {
+        display: none;
+        transition: 0.25s ease;
+
+        &:checked ~ .portfolio__grid .hidden {
+            opacity: 1;
+            font-size: inherit;
+            max-height: 999em;
+          }
+
+        & ~ .portfolio__checkbox-label:before {
+            content: 'Show more';
+          }
+          
+        &:checked ~ .portfolio__checkbox-label:before {
+            content: 'Show less';
+        }
+    }
+
+    &__checkbox-label {
+        cursor: pointer;
+        padding: 10px 20px;
+        margin: 30px;
+        background-color: #1F1F1F;
+        color: white;
+        font-size: 18px;
+        border: 0px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.25s ease;
+
+        &:checked ~ .portfolo__grid .hidden {
+            opacity: 1;
+            max-height: 100%;
+        }
+
+        &:checked::before {
+            content: "Show less";
         }
     }
 }

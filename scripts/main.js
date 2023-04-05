@@ -23,10 +23,10 @@ let projectItems = document.querySelectorAll(".portfolio__grid-item");
 let projectButton = document.querySelector("portfolio__button");
 let delay = 0;
 
-projectItems.forEach((item) => {
-  item.style.transition = `all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) ${delay}s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) ${delay}s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) ${delay}s`;
-  delay += 0.1;
-});
+// projectItems.forEach((item) => {
+//   item.style.transition = `all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) ${delay}s, opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) ${delay}s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) ${delay}s`;
+//   delay += 0.1;
+// });
 
 window.addEventListener("scroll", () => {
   let trigger = (window.innerHeight / 5) * 4;
@@ -34,7 +34,7 @@ window.addEventListener("scroll", () => {
   projectItems.forEach((item) => {
     let topDistance = item.getBoundingClientRect().top;
 
-    if (trigger > topDistance) item.classList.add("show");
+    // if (trigger > topDistance) item.classList.add("show");
   });
 });
 
