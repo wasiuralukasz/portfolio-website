@@ -476,7 +476,7 @@ body {
 }
 .portfolio__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
   -moz-column-gap: 15px;
        column-gap: 15px;
   row-gap: 15px;
@@ -485,7 +485,8 @@ body {
   justify-content: center;
 }
 .portfolio__grid-item {
-  transition: 0.25s ease;
+  max-width: 320px;
+  transition: 0.5s ease;
 }
 .portfolio__grid-item:hover {
   transform: translateY(-5px);
@@ -534,6 +535,7 @@ body {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.25s ease;
+  z-index: 10;
 }
 .portfolio__checkbox-label:checked ~ .portfolo__grid .hidden {
   opacity: 1;
@@ -552,8 +554,6 @@ body {
   padding: 25px;
   border-radius: 5px;
   background-color: #D9D9D9;
-}
-.project__inner {
   display: flex;
   width: 100%;
   height: 100%;
@@ -563,9 +563,16 @@ body {
 .project__header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0;
   margin: 0;
+}
+.project__header div {
+  display: flex;
+  width: 70px;
+  align-items: baseline;
+}
+.project__header div a {
+  margin-right: 5px;
 }
 .project__tittle {
   font-size: 24px;
