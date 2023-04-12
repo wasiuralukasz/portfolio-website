@@ -4,7 +4,6 @@ const URL = "https://api.github.com/users/wasiuralukasz"
 
 getData();
 
-
 //Get list of public repositories from GitHub
 async function getData() {
     const response = await fetch(`${URL}/repos`);
@@ -49,7 +48,7 @@ async function getData() {
                   <h2 class="project__tittle">${element.name}</h2>
                     <div>
                     <a class="project__link" href="${element.html_url}">
-                        <img src="/images/Github - logo-black.svg" alt="" />
+                        <img src="/images/Github-logo.svg" alt="" />
                       </a>
                       <a class="project__link" href="">
                         <img src="/images/external-link.svg" alt="" />
@@ -62,6 +61,7 @@ async function getData() {
                   <ul class="project__tech-list">
                     <li>${element.language}</li>
                   </ul>
+                  <div class="shine" data-target="project__shine"></div>
               </div>
             </li>
         `
