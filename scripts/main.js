@@ -131,17 +131,13 @@ async function getData() {
   let projectItems = document.querySelectorAll('.portfolio__grid-item');
 
   projectItems.forEach((item) => {
-    item.addEventListener('mouseenter', (e) => {
-      item.children[0].childNodes[7].classList.add('shine-active');
-    });
-
     item.addEventListener('mousemove', (e) => {
-      item.children[0].childNodes[7].style.setProperty('transform', `translate(${e.offsetX / 2}px, ${e.offsetY / 2}px)`)
+      item.children[0].childNodes[7].style.setProperty('opacity', '1');
+      item.children[0].childNodes[7].style.setProperty('transform', `translate(${e.layerX}px, ${e.layerY}px)`)
     });
 
     item.addEventListener('mouseleave', (e) => {
-      item.children[0].childNodes[7].classList.remove('shine-active');
-
+      item.children[0].childNodes[7].style.setProperty('opacity', '0');
     });
   })
 }
