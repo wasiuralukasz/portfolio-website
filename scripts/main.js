@@ -70,6 +70,14 @@ async function getData() {
   //Create project list in portfolio section 
   jsonData.map((element) => {
 
+      if(element.description == null) {
+        element.description = "In progress...";
+      }
+
+      if(element.language == null) {
+        element.language = "";
+      }
+
       if (counter > 2) {
           portfolioList.innerHTML +=
               `
