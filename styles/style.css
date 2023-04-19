@@ -33,8 +33,9 @@ body {
 
 .container {
   width: 100%;
+  max-width: 1100px;
   height: 100vh;
-  padding: 20px;
+  margin: 0 auto;
 }
 @media (max-width: 1200px) {
   .container {
@@ -73,6 +74,7 @@ body {
   background-color: rgb(30, 30, 30);
   padding: 10px 70px;
   opacity: 90%;
+  z-index: 20;
 }
 @media (max-width: 1200px) {
   .navbar__scroll {
@@ -205,8 +207,7 @@ body {
 .hero {
   display: flex;
   justify-content: center;
-  background-color: #1F1F1F;
-  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23232323' fill-opacity='1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-color: #141414;
 }
 @media (max-width: 1200px) {
   .hero {
@@ -224,9 +225,9 @@ body {
   width: 100%;
 }
 .hero__header h1 {
-  font-size: 5.7rem;
+  font-size: 60px;
   margin: 0;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1;
 }
 @media (max-width: 375px) {
@@ -248,7 +249,7 @@ body {
   }
 }
 .hero__header h1 span {
-  display: none;
+  color: #9E1946;
 }
 @media (max-width: 1200px) {
   .hero__header h1 span {
@@ -289,15 +290,13 @@ body {
   justify-content: center;
   align-items: center;
   height: auto;
-  padding: 100px 0;
+  padding: 75px 0;
 }
 .about__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  max-width: 1000px;
   width: 80%;
-  padding: 0 50px;
 }
 .about__image {
   width: 350px;
@@ -379,19 +378,13 @@ body {
   border-color: rgb(30, 30, 30);
 }
 
-.hidden {
-  opacity: 0;
-  max-height: 0;
-  font-size: 0;
-  transition: 0.25s ease;
-}
-
 .portfolio {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: auto;
+  padding: 75px 0;
 }
 @media (max-width: 900px) {
   .portfolio {
@@ -536,6 +529,7 @@ body {
   justify-content: center;
   align-items: center;
   height: auto;
+  padding: 75px 0;
 }
 .contact__wrapper {
   max-width: 1000px;
@@ -633,6 +627,20 @@ body {
   padding: 5px;
   font-size: 16px;
   font-weight: 600;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.hidden {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: 0.25s ease;
 }
 
 .show {
