@@ -592,7 +592,7 @@ body {
   border-radius: 10px;
   margin-bottom: 24px;
   padding: 16px;
-  font-size: 18px;
+  font-size: 18 px;
   resize: none;
   font-family: "Montserrat", sans-serif;
 }
@@ -688,4 +688,5 @@ footer {
 }
 #submit-button:hover {
   filter: drop-shadow(0px 0px 10px #9E1946);
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

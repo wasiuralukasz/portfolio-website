@@ -111,10 +111,10 @@
       <div class="contact container">
         <div class="contact__wrapper">
             <div class="contact__inputs">
-              <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
-                <input type="text" id="name_input" placeholder="your name" name="name">
-                <input type="email" id="email_input" placeholder="your email" name="email">
-                <textarea name="description" id="description_input" cols="30" rows="10" placeholder="your description"></textarea>
+              <form name="contact" netlify method="POST" onSubmit="submit">
+                <input required type="text" id="name_input" placeholder="your name" name="name">
+                <input required type="email" id="email_input" placeholder="your email" name="email">
+                <textarea required name="description" id="description_input" cols="30" rows="10" placeholder="your description"></textarea>
                 <button type="submit" id="submit-button" >Submit</button>
               </form>
             </div>
