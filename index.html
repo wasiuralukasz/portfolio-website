@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+    <title>Łukasz Wasiura</title>
     <link rel="stylesheet" href="/styles/style.css" />
   </head>
   <body>
@@ -66,7 +66,7 @@
         <div class="about__wrapper">
           <!-- <h1>About</h1> -->
             <!-- <span class="about__image"></span> -->
-            <img src="/images/about_image.JPG" alt="" class="about__image">
+            <img src="/images/about_image2.JPG" alt="" class="about__image">
             <div class="about__text">
               <h2>About me</h2>
               <p class="about__paragraph">
@@ -77,18 +77,18 @@
               <ul class="about__list">
                 <li class="about__list-item">
                   <p>Email:</p>
-                  <p>wasiuralukasz@gmail.com</p>
+                  <a href="mailto: wasiuralukasz@gmail.com">wasiuralukasz@gmail.com</a>
                 </li>
                 <li class="about__list-item">
                   <p>Github:</p>
-                  <p>github.com/wasiuralukasz</p>
+                  <a href="https://github.com/wasiuralukasz">github.com/wasiuralukasz</a>
                 </li>
                 <li class="about__list-item">
                   <p>LinkedIn:</p>
-                  <p>linkedin.com/wasiuralukasz</p>
+                  <a href="https://linkedin.com/in/wasiuralukasz">linkedin.com/wasiuralukasz</a>
                 </li>
               </ul>
-              <a class="about__link" href="">
+              <a class="about__link" href="files/cv.pdf" target="_blank">
                 Download CV
               </a>
             </div>
@@ -111,20 +111,23 @@
       <div class="contact container">
         <div class="contact__wrapper">
             <div class="contact__inputs">
-              <input type="email" id="name_input" placeholder="your name">
-              <input type="text" id="email_input" placeholder="your email">
-              <textarea name="" id="description_input" cols="30" rows="10" placeholder="your description"></textarea>
+              <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
+                <input type="text" id="name_input" placeholder="your name" name="name">
+                <input type="email" id="email_input" placeholder="your email" name="email">
+                <textarea name="description" id="description_input" cols="30" rows="10" placeholder="your description"></textarea>
+                <button type="submit" id="submit-button" >Submit</button>
+              </form>
             </div>
             <div>
               <div class="contact__text">
                 <h2>Get in touch.</h2>
                 <h3>Find me on social.</h3>
               </div>
-              <div>
-                <a href="">
+              <div class="contact__social">
+                <a class="contact__social-item" href="https://github.com/wasiuralukasz">
                   <img src="/images/Github - logo.png" alt="">
                 </a>
-                <a href="">
+                <a class="contact__social-item" href="https://linkedin.com/in/wasiuralukasz">
                   <img src="/images/Linkedin - logo.svg" alt="">
                 </a>
               </div>

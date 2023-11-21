@@ -374,9 +374,15 @@ body {
             display: flex;
         }
 
-        & p {
+        & p, a {
             display: inline;
             width: 100px;
+            text-decoration: none;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            color: #ffffff;
 
             &:first-child {
                 margin-right: 30px;
@@ -525,7 +531,7 @@ body {
         display: flex;
         width: 100%;
         height: 100%;
-        justify-content: space-between;
+        //justify-content: space-between;
         flex-direction: column;
     }
     &__header {
@@ -549,6 +555,7 @@ body {
         font-size: 24px;
         color: #FFFFFF;
         margin: 0;
+        min-height: 2.5em;
     }
 
     &__link {
@@ -564,6 +571,7 @@ body {
     &__description {
         font-size: 16px;
         color: #C7C7C7;
+        margin: 2em 0;
     }
 
     &__tech-list {
@@ -571,6 +579,7 @@ body {
         display: flex;
         margin: 0;
         padding: 0;
+        margin-top: auto;
 
         & li {
             padding-right: 15px;
@@ -646,8 +655,9 @@ body {
             border-radius: 10px;
             margin-bottom: 24px;
             padding: 16px;
-            font-size: 20px;
+            font-size: 18px;
             resize: none;
+            font-family: $montserrat;
 
             &::placeholder {
                 color: #959595;
@@ -691,6 +701,12 @@ body {
         font-size: 16px;
         font-weight: 600;
     }
+    &__social {
+        &-item {
+            margin-right: 10px;
+            text-decoration: none;
+        }
+    }
 }
 
 footer {
@@ -725,4 +741,21 @@ footer {
     filter: blur(70px);
     z-index: -1;
     transition: opacity .3s;
+}
+
+#submit-button {
+    text-decoration: none;
+        color: #ffffff;
+        background-color: #141414;
+        border: 1px #9E1946 solid;
+        border-radius: 5px;
+        padding: 12px 24px;
+        width: 100%;
+        margin: 0 auto;
+        transition: 0.3s;
+
+
+         &:hover {
+            filter: drop-shadow(0px 0px 10px #9E1946);
+         }
 }

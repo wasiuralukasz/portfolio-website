@@ -352,11 +352,17 @@ body {
   width: 60%;
   display: flex;
 }
-.about__list p {
+.about__list p, .about__list a {
   display: inline;
   width: 100px;
+  text-decoration: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  color: #ffffff;
 }
-.about__list p:first-child {
+.about__list p:first-child, .about__list a:first-child {
   margin-right: 30px;
 }
 .about__link {
@@ -476,7 +482,6 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  justify-content: space-between;
   flex-direction: column;
 }
 .project__header {
@@ -497,6 +502,7 @@ body {
   font-size: 24px;
   color: #FFFFFF;
   margin: 0;
+  min-height: 2.5em;
 }
 .project__link {
   width: 30px;
@@ -509,12 +515,14 @@ body {
 .project__description {
   font-size: 16px;
   color: #C7C7C7;
+  margin: 2em 0;
 }
 .project__tech-list {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
+  margin-top: auto;
 }
 .project__tech-list li {
   padding-right: 15px;
@@ -584,8 +592,9 @@ body {
   border-radius: 10px;
   margin-bottom: 24px;
   padding: 16px;
-  font-size: 20px;
+  font-size: 18px;
   resize: none;
+  font-family: "Montserrat", sans-serif;
 }
 .contact__inputs input::-moz-placeholder, .contact__inputs textarea::-moz-placeholder {
   color: #959595;
@@ -628,6 +637,10 @@ body {
   font-size: 16px;
   font-weight: 600;
 }
+.contact__social-item {
+  margin-right: 10px;
+  text-decoration: none;
+}
 
 footer {
   display: flex;
@@ -660,4 +673,19 @@ footer {
   filter: blur(70px);
   z-index: -1;
   transition: opacity 0.3s;
+}
+
+#submit-button {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #141414;
+  border: 1px #9E1946 solid;
+  border-radius: 5px;
+  padding: 12px 24px;
+  width: 100%;
+  margin: 0 auto;
+  transition: 0.3s;
+}
+#submit-button:hover {
+  filter: drop-shadow(0px 0px 10px #9E1946);
 }/*# sourceMappingURL=style.css.map */

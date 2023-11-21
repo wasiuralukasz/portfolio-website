@@ -67,8 +67,10 @@ async function getData() {
   const jsonData = await response.json();
   let counter = 0;
   
+  console.log(jsonData);
+
   //Create project list in portfolio section 
-  jsonData.map((element) => {
+  jsonData.toReversed().map((element) => {
 
       if(element.description == null) {
         element.description = "In progress...";
