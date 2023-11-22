@@ -50,6 +50,12 @@ body {
     }
 }
 
+h1 {
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 600;
+}
+
 .arrow {
     width: 2rem;
     height: 2rem;
@@ -267,7 +273,7 @@ body {
             color: #9E1946;
             @include bp.breakpoint(xl) {
                 display: inline-block;
-                color: #3B40B9;
+                color: #9E1946;
             }
         }
 
@@ -298,7 +304,7 @@ body {
         border-color: white;
 
         @include bp.breakpoint(xl) {
-            border-color: #3B40B9;
+            border-color: #9E1946;
         }
     }
 }
@@ -311,12 +317,28 @@ body {
     height: auto;
     padding: 75px 0;
 
+    @include bp.breakpoint(l) {
+        flex-direction: column;
+    }
+
+    & h1 {
+        display: none;
+
+        @include bp.breakpoint(l) {
+            display: block;
+        }
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: row;
         justify-content: center;
         width: 80%;
+
         
+        @include bp.breakpoint(l) {
+            flex-direction: column;
+        }
     }
 
     &__image {
@@ -326,6 +348,10 @@ body {
         background-size: cover;
         border-radius: 5px;
         display: block;
+
+        @include bp.breakpoint(l) {
+            width: auto;
+        }
     }
 
     &__text {
@@ -333,6 +359,10 @@ body {
         flex-direction: column;
         width: 100%;
         margin-left: 100px;
+
+        @include bp.breakpoint(l) {
+            margin-left: 0px;
+        }
     }
 
     & h2 {
@@ -340,6 +370,10 @@ body {
         font-size: 48px;
         line-height: 72px;
         margin: 0;
+
+        @include bp.breakpoint(l) {
+            display: none;
+        }
     }
 
     &__paragraph {
@@ -356,7 +390,7 @@ body {
         }
 
         @include bp.breakpoint(l) {
-            margin: 50px;
+            margin: 50px 0;
         }
 
         @include bp.breakpoint(m) {
@@ -412,8 +446,6 @@ body {
     }
 }
 
-
-
 .portfolio {
     position: relative;
     display: flex;
@@ -421,10 +453,6 @@ body {
     align-items: center;
     height: auto;
     padding: 75px 0;
-
-    @include bp.breakpoint(xl) {
-        
-    }
 
     @include bp.breakpoint(l) {
         flex-direction: column;
@@ -443,6 +471,15 @@ body {
     }
 
     &__grid {
+
+        @include bp.breakpoint(m) {
+            grid-template-columns: repeat(1, minmax(300px, 1fr));
+        }
+
+        @include bp.breakpoint(l) {
+            grid-template-columns: repeat(1, minmax(300px, 1fr));
+        }
+
         display: grid;
         grid-template-columns: repeat(3, minmax(300px, 1fr));
         column-gap: 20px;
