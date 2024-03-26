@@ -593,6 +593,7 @@ h1 {
         color: #FFFFFF;
         margin: 0;
         min-height: 2.5em;
+        text-wrap: wrap;
     }
 
     &__link {
@@ -739,6 +740,8 @@ h1 {
         font-weight: 600;
     }
     &__social {
+        display: flex;
+        justify-content: center;
         &-item {
             margin-right: 10px;
             text-decoration: none;

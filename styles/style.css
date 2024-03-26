@@ -552,6 +552,7 @@ h1 {
   color: #FFFFFF;
   margin: 0;
   min-height: 2.5em;
+  text-wrap: wrap;
 }
 .project__link {
   width: 30px;
@@ -685,6 +686,10 @@ h1 {
   padding: 5px;
   font-size: 16px;
   font-weight: 600;
+}
+.contact__social {
+  display: flex;
+  justify-content: center;
 }
 .contact__social-item {
   margin-right: 10px;
